@@ -1,0 +1,66 @@
+extends layout
+
+block content
+		#container_title_srilanka
+		.container.text-center(style='margin-top: 5%')
+			h1 Sri Lanka
+			h4#description The heart of the Indian Ocean
+		.container(style='margin-top: 5%')
+			.row
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Faro', data-toggle='collapse') Mirissa
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Albufeira', data-toggle='collapse') Tangalle
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Sagres', data-toggle='collapse') Nuwara Eliya
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Lagos', data-toggle='collapse') Yala national park
+		.container.text-center(style='margin-top: 5%')
+			#hidden_Faro.collapse
+				h3 Mirissa
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Albufeira.collapse
+				h3 Tangalle
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Sagres.collapse
+				h3 Nuwara Eliya
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Lagos.collapse
+				h3 Yala national park
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container-fluid.text-center(style="margin-top:10%")
+			.form-group(style='width:50%; min-width:150px;display:block; margin: auto')
+				.row
+					.col-xs-12.col-sm-6
+						input(type="text" class="form-control" placeholder="Your name")
+					.col-xs-12.col-sm-6
+						input#input_email(type="email" class="form-control" placeholder="Your email")
+				br
+				textarea#comment.form-control(rows='5' placeholder="Your comment")
+				button#comment-btn.btn-default.pull-right(style='min-width: 30%') Send
+		// Footer
+		footer.container-fluid.text-center
+			.row
+				.col-sm-4
+					img.navbar-brand(src='images/logo_travellersblog.png')
+				.col-sm-4
+					h5 Address and contact info here
+				.col-sm-4
+					a.fa.fa-facebook(href='#')
+					a.fa.fa-linkedin(href='#')
+					a.fa.fa-github(href='#')

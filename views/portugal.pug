@@ -1,0 +1,100 @@
+extends layout
+
+block content
+		#container_title_portugal
+		.container.text-center(style='margin-top: 5%')
+			h1 Algarve, Portugal
+			h4#description A little space of heaven
+		.container(style='margin-top: 5%')
+			.row
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Faro', data-toggle='collapse') Faro
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Albufeira', data-toggle='collapse') Albufeira
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Sagres', data-toggle='collapse') Sagres
+				.col-lg-3.col-md-3.col-sm-3.col-xs-6.text-center
+					h4
+						a(href='#hidden_Lagos', data-toggle='collapse') Lagos
+		.container.text-center(style='margin-top: 5%')
+			#hidden_Faro.collapse
+				h3 Faro
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Albufeira.collapse
+				h3 Albufeira
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Sagres.collapse
+				h3 Sagres
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container.text-center
+			#hidden_Lagos.collapse
+				h3 Lagos
+				br
+				p
+					| Farorol egy cik fewfweknf kwebkwe rnkwe nrkjwen kwjtn kt hkwwh kwe klelw hqhjkl bb ebg kr kjkgergk er blablaablbergergergergergegerg
+		.container-fluid.text-center(style="margin-top:10%")
+			.form-group(style='width:50%; min-width:150px;display:block; margin: auto')
+				.row
+					.col-xs-12.col-sm-6
+						input(type="text" class="form-control" placeholder="Your name")
+					.col-xs-12.col-sm-6
+						input#input_email(type="email" class="form-control" placeholder="Your email")
+				br
+				textarea#comment.form-control(rows='5' placeholder="Your comment")
+				button#comment-btn.btn-default.pull-right(style='min-width: 30%') Send
+		//- // Comment box
+		.detailBox
+			.titleBox
+				label Comment Box
+				button.close(type='button', aria-hidden='true') ×
+			.commentBox
+				p.taskDescription Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.actionBox
+				ul.commentList
+					li
+						.commenterImage
+							img(src='http://placekitten.com/50/50')
+						.commentText
+							p Hello this is a test comment.
+							span.date.sub-text on March 5th, 2014
+					li
+						.commenterImage
+							img(src='http://placekitten.com/45/45')
+						.commentText
+							p
+								| Hello this is a test comment and this comment is particularly very long and it goes on and on and on.
+							span.date.sub-text on March 5th, 2014
+					li
+						.commenterImage
+							img(src='http://placekitten.com/40/40')
+						.commentText
+							p Hello this is a test comment.
+							span.date.sub-text on March 5th, 2014
+				form.form-inline(role='form')
+					.form-group
+						input.form-control(type='text', placeholder='Your comments')
+					.form-group
+						button.btn.btn-default Add
+		//- // end of comment box
+		//- // Footer
+		footer.container-fluid.text-center
+			.row
+				.col-sm-4
+					img.navbar-brand(src='images/logo_travellersblog.png')
+				.col-sm-4
+					h5 Address and contact info here
+				.col-sm-4
+					a.fa.fa-facebook(href='#')
+					a.fa.fa-linkedin(href='#')
+					a.fa.fa-github(href='#')

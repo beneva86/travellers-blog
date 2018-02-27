@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+	head
+		title Traveller's blog
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		script.
+			$(document).ready(function() {
+				jQuery('a').click( function(e) {
+					jQuery('.collapse').collapse('hide');
+				});
+			})
+	body
+		//- // Navigation bar
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					img.navbar-brand(src='images/logo_travellersblog.png')
+				#myNavbar.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='/') Home
+						li.dropdown
+							a.dropdown-toggle(data-toggle='dropdown', href='#')
+								| Destinations
+								span.caret
+							ul.dropdown-menu
+								li
+									a.grow(href='/portugal') Portugal
+								li
+									a.grow(href='/thailand') Thailand
+								li
+									a.grow(href='/santorini') Santorini
+								li
+									a.grow(href='/costarica') Costa Rica
+								li
+									a.grow(href='/srilanka') Sri Lanka
+						li
+							a(href='/photogallery') Photo Gallery
+						li
+							a(href='/contact') Contact
+block content
