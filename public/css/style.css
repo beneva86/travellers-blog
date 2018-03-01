@@ -250,6 +250,34 @@ textarea{
     margin-top:10px 0;
 }
 
+.cityDescription {
+  width:80%; 
+  text-align: justify; 
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+figure {
+  margin: 4%;
+}
+
+figcaption {
+  margin-top: 1%;
+  font-style: italic;
+}
+
+.title-box {
+  background-color: #008ac38a;
+  clear: both;
+  display: inline-block;
+  box-shadow: 5px 5px 5px #888;
+  width: 80%;
+  margin: 3% 2%;
+  padding: 6px;
+  border-left: 10px solid #1a5fafbf;
+  border-radius: 0 4px 4px 0;
+}
+
 .commentList {
     padding:0;
     list-style:none;
