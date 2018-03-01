@@ -5,25 +5,25 @@ block content
 		.container
 			h1#title.text-center Places where I've been so far
 		//- // 2columns layout text on the right,image on the left - Portugal
-		.container(style='margin-top: 5%')
-			.row
+		.container-fluid(style='margin-top: 5%')
+			.row(style='width: 100%')
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_portugal_2.jpg')
-				.col-sm-5(style='padding-top:4%')
+				.col-sm-5(style='padding:2%')
 					h2.text-center Portugal
 					br
-					p This is the article about Portugal
+					p.text-justify Portugal’s most southern region, the Algarve Coast, is a captivating mix of blue Mediterranean sea, golden sand beaches and limestone cliffs blanketed by whitewashed fishing villages. One drive along the Algarve Coast and it’s easy to see why this is now a top Portugal road trip!
 					.text-center
 						button#readmore.btn.btn-default 
 							a(href="/portugal") Read more
 		//- // End of 2 columns layout
 		//- // 2columns layout text on the left,image on the right - Thailand
-		.container
-			.row
-				.col-sm-5(style='padding-top:4%')
+		.container-fluid
+			.row(style='width: 100%')
+				.col-sm-5(style='padding:2%')
 					h2.text-center Thailand
 					br
-					p This is the article about Thailand
+					p.text-justify This is the article about Thailand
 					.text-center
 						button#readmore.btn.btn-default
 							a(href="/thailand") Read more
@@ -31,25 +31,25 @@ block content
 					img.img-responsive.grow(src='images/collage_thailand.jpg')
 		//- // End of 2 columns layout
 		//- // 2columns layout text on the right,image on the left - Santorini
-		.container
-			.row
+		.container-fluid
+			.row(style='width: 100%')
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_santorini.jpg')
-				.col-sm-5(style='padding-top:4%')
+				.col-sm-5(style='padding:2%')
 					h2.text-center Santorini
 					br
-					p This is the article about Santorini
+					p.text-justify This is the article about Santorini
 					.text-center
 						button#readmore.btn.btn-default
 							a(href="/santorini") Read more
 		//- // End of 2 columns layout
 		//- // 2columns layout text on the left,image on the right - Costa Rica
-		.container
-			.row
-				.col-sm-5(style='padding-top:4%')
+		.container-fluid
+			.row(style='width: 100%')
+				.col-sm-5(style='padding:2%')
 					h2.text-center Costa Rica
 					br
-					p
+					p.text-justify
 						| This is the article about Costa Rica. Teszteljuk, hogy hogy fog kinezni, ha sokat irok. Hogy alakulnak a marginok es a paddingek
 					.text-center
 						button#readmore.btn.btn-default
@@ -58,14 +58,14 @@ block content
 					img.img-responsive.grow(src='images/collage_costarica2.jpg')
 		//- // End of 2 columns layout
 		//- // 2columns layout text on the right,image on the left - Santorini
-		.container
-			.row
+		.container-fluid
+			.row(style='width: 100%')
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_srilanka.jpg')
-				.col-sm-5(style='padding-top:4%')
+				.col-sm-5(style='padding:2%')
 					h2.text-center Sri Lanka
 					br
-					p This is the article about Sri Lanka
+					p.text-justify This is the article about Sri Lanka
 					.text-center
 						button#readmore.btn.btn-default
 							a(href="/srilanka") Read more
