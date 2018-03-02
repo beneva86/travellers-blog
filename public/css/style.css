@@ -324,3 +324,11 @@ td > p {
     background-color: #6fb0f30d;
     font-size: 18px;
 }
+
+.factsList {
+  list-style-type:initial;
+}
+
+.factsList > li {
+  margin: 12px auto;
+}
