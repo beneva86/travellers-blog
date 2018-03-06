@@ -135,10 +135,11 @@ block content
 		.container-fluid(style='margin-top: 15%')
 			.myDetailBox
 				.myTitleBox.text-center
-					label(data-messages=messages) Sri Lanka
-				if !messages
-					.noComments.text-center
-						p There are no comments in this topic 	
+					label(data-messages=messages) Portugal
+					//- if !messages
+				.noComments.text-center
+					p There are no comments in this topic 
+					//- else 	
 				.myCommentBox
 					if messages
 						each message in messages
@@ -150,18 +151,18 @@ block content
 									td(colspan='1')
 										p#commentText=message.body
 										span.date.sub-text=message.createdAt.toString().substring(0,21)
-
 				form#commentForm.form-group(role='form')
 						.row
 							.col-xs-12.col-sm-6
-								input#username(type="text" class="form-control" name="username" placeholder="Your name")
-							.col-xs-12.col-sm-6
-								input#input_email(type="email" class="form-control" name="email" placeholder="Your email")
+								input#username(type="text" class="form-control" name="username" placeholder="Your name" required)
+							.col-xs-12.col-sm-6.text-right
+								input#input_email(type="email" class="form-control" name="email" placeholder="Your email" required)
+								p#inform *Will not be published
+						.row#error_message.text-center(style="width:100%; margin-left:0%; margin-top:3%")
+							.alert-danger.hidden
 						br
-						textarea#message.form-control(rows='5' placeholder="Your comment" name="message")
+						textarea#message.form-control(rows='5' placeholder="Your comment" name="message" required)
 						button#message-btn.btn-default(a name='newMessage') Send
-
-
 		//- // Footer
 		footer.container-fluid.text-center
 			.row

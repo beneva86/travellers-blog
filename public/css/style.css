@@ -310,6 +310,11 @@ td > p {
   margin-bottom: 5%;
 }
 
+#inform {
+  color:red;
+  font-size: 11px;
+}
+
 .sub-text {
     color:#aaa;
     font-family:verdana;
