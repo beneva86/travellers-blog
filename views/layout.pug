@@ -4,6 +4,23 @@ html(lang='en')
 		title Traveller's blog
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='apple-touch-icon', sizes='57x57', href='images/apple-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='60x60', href='images/apple-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='images/apple-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='images/apple-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='images/apple-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='images/apple-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='144x144', href='images/apple-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='images/apple-icon-152x152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href='images/apple-icon-180x180.png')
+		link(rel='icon', type='image/png', sizes='192x192', href='images/android-icon-192x192.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='images/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='96x96', href='images/favicon-96x96.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='images/favicon-16x16.png')
+		link(rel='manifest', href='images/manifest.json')
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileImage', content='images/ms-icon-144x144.png')
+		meta(name='theme-color', content='#ffffff')
 		link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
 		link(rel='stylesheet', type='text/css', href='css/style.css')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
@@ -20,17 +37,17 @@ html(lang='en')
 		nav.navbar.navbar-inverse.navbar-fixed-top
 			.container-fluid
 				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
 						span.icon-bar
 						span.icon-bar
 						span.icon-bar
 					img.navbar-brand(src='images/logo_travellersblog.png')
-				#myNavbar.collapse.navbar-collapse
+				.navbar-collapse.collapse
 					ul.nav.navbar-nav.navbar-right
 						li
 							a(href='/') Home
-						li.dropdown
-							a.dropdown-toggle(data-toggle='dropdown', href='#')
+						li.dropdown.hidden-xs
+							a.dropdown-toggle(data-toggle='dropdown', href='#' role="button" aria-haspopup="true" aria-expanded="false")
 								| Destinations
 								span.caret
 							ul.dropdown-menu
@@ -42,6 +59,14 @@ html(lang='en')
 									a.grow(href='/costarica') Costa Rica
 								li
 									a.grow(href='/srilanka') Sri Lanka
+						li.visible-xs
+							a(href='/portugal') Portugal
+						li.visible-xs
+							a(href='/santorini') Santorini
+						li.visible-xs
+							a(href='/costarica') Costa Rica
+						li.visible-xs
+							a(href='/srilanka') Sri Lanka
 						li
 							a(href='/contact') Contact
 block content

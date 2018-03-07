@@ -36,6 +36,9 @@ const Message = sequelize.define('messages', {
 	},
 	topic: {
 		type: Sequelize.TEXT
+	},
+	time: {
+		type: Sequelize.TEXT
 	}
 });
 
@@ -60,13 +63,7 @@ app.get('/costarica', (req,res) => {
 			model: User
 		}]
 	}).then(messages => {
-		if(messages.length > 0) {
-			res.render('costarica', {messages:messages});
-		}
-		else {
-			res.render('costarica');
-		}
-		
+		res.render('costarica', {messages:messages});
 	});
 });
 
@@ -74,9 +71,6 @@ app.get('/costarica', (req,res) => {
 app.post('/formvalidation', (req,res) => {
 	let username = req.body.username;
 	let email = req.body.email;
-	console.log('---------------')
-	console.log(username)
-	console.log(email)
 
 	User.findOne({
 		where: {
@@ -98,6 +92,7 @@ app.post('/message_costarica', (req,res) => {
 	const topic = req.body.topic;
 	const username = req.body.username;
 	const email = req.body.email;
+	const time = req.body.time;
 
 	User.create({
 		username: username,
@@ -106,7 +101,8 @@ app.post('/message_costarica', (req,res) => {
 		return user.createMessage({
 			body: message,
 			topic: topic,
-		})
+			time: time
+		});
 	}).then(newMessage => {
 		res.send({newMessage});
 	});
@@ -122,12 +118,7 @@ app.get('/portugal', (req,res) => {
 			model: User
 		}]
 	}).then(messages => {
-		if(messages.length > 0) {
-			res.render('portugal', {messages:messages});
-		}
-		else {
-			res.render('portugal');
-		}		
+		res.render('portugal', {messages:messages});	
 	});
 });
 
@@ -137,6 +128,7 @@ app.post('/message_portugal', (req,res) => {
 	const topic = req.body.topic;
 	const username = req.body.username;
 	const email = req.body.email;
+	const time = req.body.time;
 
 	User.create({
 		username: username,
@@ -145,7 +137,8 @@ app.post('/message_portugal', (req,res) => {
 		return user.createMessage({
 			body: message,
 			topic: topic,
-		})
+			time: time
+		});
 	}).then(newMessage => {
 		res.send({newMessage});
 	});
@@ -161,12 +154,7 @@ app.get('/santorini', (req,res) => {
 			model: User
 		}]
 	}).then(messages => {
-		if(messages.length > 0) {
-			res.render('santorini', {messages:messages});
-		}
-		else {
-			res.render('santorini');
-		}		
+		res.render('santorini', {messages:messages});		
 	});
 });
 
@@ -176,6 +164,7 @@ app.post('/message_santorini', (req,res) => {
 	const topic = req.body.topic;
 	const username = req.body.username;
 	const email = req.body.email;
+	const time = req.body.time;
 
 	User.create({
 		username: username,
@@ -184,6 +173,7 @@ app.post('/message_santorini', (req,res) => {
 		return user.createMessage({
 			body: message,
 			topic: topic,
+			time: time
 		});
 	}).then(newMessage => {
 		res.send({newMessage});
@@ -200,12 +190,7 @@ app.get('/srilanka', (req,res) => {
 			model: User
 		}]
 	}).then(messages => {
-		if(messages.length > 0) {
-			res.render('srilanka', {messages:messages});
-		}
-		else {
-			res.render('srilanka');
-		}		
+		res.render('srilanka', {messages:messages});		
 	});
 });
 
@@ -215,6 +200,7 @@ app.post('/message_srilanka', (req,res) => {
 	const topic = req.body.topic;
 	const username = req.body.username;
 	const email = req.body.email;
+	const time = req.body.time;
 
 	User.create({
 		username: username,
@@ -223,10 +209,16 @@ app.post('/message_srilanka', (req,res) => {
 		return user.createMessage({
 			body: message,
 			topic: topic,
+			time: time
 		});
 	}).then(newMessage => {
 		res.send({newMessage});
 	});
+});
+
+//-------------ROUTE: Contact page-------------
+app.get('/contact', (req,res) => {
+	res.render('contact');
 });
 
 sequelize.sync();

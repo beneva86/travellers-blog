@@ -135,7 +135,7 @@ block content
 			.myDetailBox
 				.myTitleBox.text-center
 					label(data-messages=messages) Portugal
-				if !messages
+				if messages.length === 0
 					.noComments.text-center
 						p There are no comments in this topic 
 				else 	
@@ -150,7 +150,7 @@ block content
 										td(colspan='1')
 											p#commentText=message.body
 											span.date.sub-text=message.createdAt.toString().substring(0,21)
-				form#commentForm.form-group(role='form')
+				form#commentForm.form-group(role='form' autocomplete='off')
 						.row
 							.col-xs-12.col-sm-6
 								input#username(type="text" class="form-control" name="username" placeholder="Your name" required)
@@ -161,18 +161,18 @@ block content
 							.alert-danger.hidden
 						br
 						textarea#message.form-control(rows='5' placeholder="Your comment" name="message" required)
-						button#message-btn.btn-default(a name='newMessage') Send
+						button#message-btn.btn-default(name='newMessage') Send
 		//- // Footer
-		footer.container-fluid.text-center
-			.row
-				.col-sm-4
-					img.navbar-brand(src='images/logo_travellersblog.png')
-				.col-sm-4
-					h5 Address and contact info here
-				.col-sm-4
-					a.fa.fa-facebook(href='#')
-					a.fa.fa-linkedin(href='#')
-					a.fa.fa-github(href='#')
+		//- footer.container-fluid.text-center
+		//- 	.row
+		//- 		.col-sm-4
+		//- 			img.navbar-brand(src='images/logo_travellersblog.png')
+		//- 		.col-sm-4
+		//- 			h5 Address and contact info here
+		//- 		.col-sm-4
+		//- 			a.fa.fa-facebook(href='#')
+		//- 			a.fa.fa-linkedin(href='#')
+		//- 			a.fa.fa-github(href='#')
 		script(src="/js/sendmessage.js")
 
 

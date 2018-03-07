@@ -8,19 +8,49 @@ div, body{
   font-family: exo, sans-serif; 
 }
 
- .navbar{
+.navbar {
   margin-bottom: 0;
   border-radius: 0;
   font-size: 1.2em;
   border: 0;
   background-color: rgba(0,0,0,0.4);
-  max-height: 8%;
+  height: 55px;
 }
 
-.navbar-brand{
+.navbar-brand {
   float:left;
   min-height: 50px;
   padding: 10px 10px 10px 20%;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white; 
+  background-color: transparent
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #eee;
+}
+
+/*.navbar-collapse.in {
+  background-color: rgba(0,0,0,0.4);
+  float: right;
+  width: 30%;
+  min-width: 170px;
+}*/
+
+.navbar-collapse.collapsing, .navbar-collapse.collapse.in {
+  background-color: rgba(0,0,0,0.4);
+  float: right;
+  width: 30%;
+  min-width: 170px;
 }
 
 @media (max-width: 767px) {
@@ -35,21 +65,6 @@ div, body{
     .navbar-brand {
        display: none;
     }
-}
-
-.navbar-inverse .navbar-brand {
-color: white;    
-}
-
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-  background-color: transparent;
-}
-
-.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
-  color: white;
-}
-.navbar-inverse .navbar-nav li a {
-  color: #eee;
 }
 
 #container_title_home, #container_title_portugal, #container_title_santorini, #container_title_costarica, #container_title_thailand, #container_title_srilanka {
@@ -81,7 +96,7 @@ color: white;
 }
 
 #container_title_srilanka {
-    background-image: url(../images/srilanka_background.jpg)
+    background-image: url(../images/srilanka_background2.jpg)
 }
 
 #title {
@@ -90,6 +105,10 @@ color: white;
 
 #description {
   font-style: italic;
+}
+
+#small_img {
+  padding-top: 20px;
 }
 
 @media (min-width: 992px) {
@@ -111,6 +130,9 @@ color: white;
         text-shadow: none;
         background-color: black;
         width: 140px;
+    }
+    .col-sm-5 {
+      padding-top: 4% !important;
     }
 }
 
@@ -136,16 +158,32 @@ color: white;
     }
 }
 
-
 @media (max-width: 767px) {
   #input_email {
     margin-top: 3%;
   }
-
+  .navbar-collapse.collapse > ul > li:hover {
+    background-color: #333;
+  }
 }
 
 #readmore {
-margin-top: 5%;    
+  margin-top: 5%;  
+  width: 40%;
+  background-color: #0792f559; 
+}
+
+#readmore > a {
+    color: black; 
+    font-size: 16px;
+}
+
+#readmore:hover {
+  background-color: #0792f5a8;
+} 
+
+#readmore > a:hover {
+ text-decoration: none;
 }
 
 .grow { 
@@ -174,7 +212,7 @@ margin-top: 5%;
     bottom: 0;
 }
 
-footer {
+/*footer {
   width: 100%;
   background-color: black;
   color: white;
@@ -183,7 +221,7 @@ footer {
   margin-top: 5%;
 }
 
-/*ICONS IN THE FOOTER*/
+ICONS IN THE FOOTER
     .fa {
       padding: 15px;
       font-size: 25px;
@@ -192,7 +230,7 @@ footer {
     .fa:hover {
       color: grey;
       text-decoration: none;
-    }
+    }*/
 
 .dropdown-menu {
   background-color: rgba(0,0,0,0.7);
@@ -208,9 +246,16 @@ footer {
 }
 
 #message-btn {
+  color: white;
   margin-top: 4%;
-  width: 50%;
+  width: 40%;
   min-width: 30%;
+  background-color: #3498db;
+  padding: 1%;
+}
+
+#message-btn:hover {
+  background-color: #3cb0fd;
 }
 
 textarea{
@@ -227,6 +272,7 @@ textarea{
     min-width:150px;
     display:block; 
     margin: auto;
+    margin-bottom: 8%;
 }
 .myTitleBox {
     background-color:#736f6b26;
@@ -239,7 +285,7 @@ textarea{
 }
 
 .myCommentBox {
-    padding:10px;
+    padding:2%;
     border-top:1px dotted #bbb;
     max-height: 400px;
     overflow: scroll;
@@ -306,13 +352,14 @@ td > p {
   display:block; 
   margin: auto;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 
 #inform {
-  color:red;
+  color:black;
   font-size: 11px;
+  font-weight: bold;
 }
 
 .sub-text {
@@ -337,3 +384,57 @@ td > p {
 .factsList > li {
   margin: 12px auto;
 }
+
+.alert-danger {
+  font-size: 16px;
+  background-color: transparent;
+}
+
+#contact-form > .form-group > input:not([type='submit']), #contact-form > .form-group > textarea {
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px inset #bbbaba;
+  margin-top: 1%;
+}
+
+#contact-form > .form-group > input:not([type='submit'])::placeholder, #contact-form > .form-group > textarea::placeholder {
+  color: #bbbaba;
+  font-size: 14px;
+}
+
+#contact-form > .form-group > textarea {
+  height: 35px;
+}
+
+#contact-form > .form-group > input[type=text], #contact-form > .form-group > input[type=email], #contact-form > .form-group > textarea {
+  color: white;
+  font-size: 16px;
+}
+
+#contact-form {
+  min-width: 200px;
+}
+
+#contact-form > .form-group > label {
+  color: #fdfdfb;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+#contact-btn {
+  margin-top: 7%;
+  height: 30px;
+  background: transparent;
+  color: #fdfdfb;
+  width: 22%;
+  min-width: 130px;
+  border-radius: 5px;
+}
+
+#contact-btn:hover {
+  background-color: #ffffff26;
+}
+
+

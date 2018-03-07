@@ -1,0 +1,24 @@
+extends layout
+
+block content
+		.container-fluid(style='padding-top:10%; background-color: #3b3f45ba; color: #fdfdfb')
+			.row.text-center
+				h1 Contact
+			.row.text-center
+				p(style='font-size: 1.2em') I'm here to answer the questions you may have
+		.container-fluid(style='padding-top:8%; height: 100%; background-color: #3b3f45ba')
+			.row
+				.col-md-12
+					form#contact-form(action='https://formspree.io/benikovszky.eva@gmail.com', method='POST' autocomplete='off')
+						.form-group.center-block
+							label(for='inputName') Name
+							input#inputName.form-control.contact-input(type='text' placeholder='Your name' name='name' required)
+						.form-group.center-block
+							label(for='inputName') Email
+							input#inputEmail.form-control.contact-input(type='email' placeholder='Your email' name='email' required)
+						.form-group.center-block
+							label(for='inputMessage') Message
+							textarea#inputMessage.form-control.contact-input(type='text' row='5' placeholder='Your message' name='message' required)
+							input#contact-btn.btn-default.grow(type='submit' value='Send message')
+		script(src="/js/textarea_auto_expand.js")
+

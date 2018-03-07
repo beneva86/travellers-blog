@@ -5,35 +5,56 @@ block content
 		.container
 			h1#title.text-center Places where I've been so far
 		//- // 2columns layout text on the right,image on the left - Portugal
-		.container-fluid(style='margin-top: 7%')
-			.row(style='width: 100%')
-				.col-sm-5(style='padding:2%')
+		.container-fluid.hidden-xs(style='margin-top: 7%')
+			.row(style='width: 100%;' )
+				.col-sm-5(style='padding:1%; padding-left: 3%; padding-right: 2%;')
 					h2.text-center Portugal
 					br
-					p.text-justify Portugal’s most southern region, the Algarve Coast, is a captivating mix of blue Mediterranean sea, golden sand beaches and limestone cliffs blanketed by whitewashed fishing villages. One drive along the Algarve Coast and it’s easy to see why this is now a top Portugal road trip!
+					p.text-justify Portugal is lying along the Atlantic coast of the Iberian Peninsula in southwestern Europe. Portugal’s most southern region, the Algarve Coast, is a captivating mix of blue Mediterranean sea, golden sand beaches and limestone cliffs blanketed by whitewashed fishing villages. One drive along the Algarve Coast and it’s easy to see why this is now a top Portugal road trip!
 					.text-center
-						button#readmore.btn.btn-default 
+						button#readmore.btn.btn-default
 							a(href="/portugal") Read more
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_portugal2.jpg')
-		//- // End of 2 columns layout
-		//- // 2columns layout text on the right,image on the left - Santorini
-		.container-fluid
+		.container-fluid.visible-xs(style='margin-top: 7%')
+			.col-xs-12(style='padding:1%;')
+				h2.text-center Portugal
+				br
+				p.text-justify Portugal’s most southern region, the Algarve Coast, is a captivating mix of blue Mediterranean sea, golden sand beaches and limestone cliffs blanketed by whitewashed fishing villages. One drive along the Algarve Coast and it’s easy to see why this is now a top Portugal road trip!
+				.text-center
+					button#readmore.btn.btn-default 
+						a(href="/portugal") Read more
+			.col-xs-12
+				img#small_img.img-responsive.grow(src='images/collage_portugal2.jpg')
+		//- End of 2 columns layout
+		//- 2columns layout text on the right,image on the left - Santorini
+		.container-fluid.hidden-xs
 			.row(style='width: 100%; margin-top: 7%')
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_santorini.jpg')
-				.col-sm-5(style='padding:2%')
+				.col-sm-5(style='padding:1%')
 					h2.text-center Santorini
 					br
-					p.text-justify Santorini is the top destination in Greece and among the most romantic destinations in the Greek islands and also in the world. Located in the Aegean Sea, in the Cyclades islands, Santorini island was the site of one of the largest volcanic eruptions in the world and what remains today is a submerged volcano and a caldera. Amazing villages has been constructed on the edge of this caldera, with Cycladic architecture and breathtaking view to the sea. Apart from the fabulous caldera villages, Santorini Greece is also famous for the romantic sunset, the volcano and the luxurious resorts.
+					p.text-justify Santorini is the top destination in Greece and among the most romantic destinations in the Greek islands and also in the world. Located in the Aegean Sea, in the Cyclades islands, Santorini island was the site of one of the largest volcanic eruptions in the world and what remains today is a submerged volcano and a caldera. Apart from the fabulous caldera villages, Santorini is also famous for the romantic sunset, the volcano and the luxurious resorts.
 					.text-center
 						button#readmore.btn.btn-default
 							a(href="/santorini") Read more
+		.container-fluid.visible-xs
+			.row(style='width: 100%; margin-top: 7%')
+				.col-xs-12
+					h2.text-center Santorini
+					br
+					p.text-justify Santorini is the top destination in Greece and among the most romantic destinations in the Greek islands and also in the world. Located in the Aegean Sea, in the Cyclades islands, Santorini island was the site of one of the largest volcanic eruptions in the world and what remains today is a submerged volcano and a caldera. Apart from the fabulous caldera villages, Santorini is also famous for the romantic sunset, the volcano and the luxurious resorts.
+					.text-center
+						button#readmore.btn.btn-default
+							a(href="/santorini") Read more
+				.col-xs-12
+					img#small_img.img-responsive.grow(src='images/collage_santorini.jpg')
 		//- // End of 2 columns layout
 		//- // 2columns layout text on the left,image on the right - Costa Rica
-		.container-fluid
+		.container-fluid.hidden-xs
 			.row(style='width: 100%; margin-top: 7%')
-				.col-sm-5(style='padding:2%')
+				.col-sm-5(style='padding:1%; padding-left: 3%; padding-right: 2%')
 					h2.text-center Costa Rica
 					br
 					p.text-justify The happiest country in the world; a paradise for peace and biodiversity; a green beacon for environmental stewardship — Costa Rica is a country of many accolades. But Costa Rica’s history and culture extend far beyond the reach of international recognition. The small Central American nation is home to incredible biodiversity and rich cultures, a passion for freedom, and a history of democracy, equality, and education for all.
@@ -42,30 +63,51 @@ block content
 							a(href="/costarica") Read more
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_costarica2.jpg')
+		.container-fluid.visible-xs
+			.row(style='width: 100%; margin-top: 7%')
+				.col-xs-12
+					h2.text-center Costa Rica
+					br
+					p.text-justify The happiest country in the world; a paradise for peace and biodiversity; a green beacon for environmental stewardship — Costa Rica is a country of many accolades. But Costa Rica’s history and culture extend far beyond the reach of international recognition. The small Central American nation is home to incredible biodiversity and rich cultures, a passion for freedom, and a history of democracy, equality, and education for all.
+					.text-center
+						button#readmore.btn.btn-default
+							a(href="/costarica") Read more
+				.col-xs-12
+					img#small_img.img-responsive.grow(src='images/collage_costarica2.jpg')
 		//- // End of 2 columns layout
-		
 		//- // 2columns layout text on the right,image on the left - Santorini
-		.container-fluid
+		.container-fluid.hidden-xs
 			.row(style='width: 100%; margin-top: 7%')
 				.col-sm-7
 					img.img-responsive.grow(src='images/collage_srilanka.jpg')
-				.col-sm-5(style='padding:2%')
+				.col-sm-5(style='padding:1%')
 					h2.text-center Sri Lanka
 					br
 					p.text-justify They say there is no other country in the world, like Sri Lanka. A smiling sun all year round, golden beaches, ancient cities, exciting safaris, colourful culture, adventure sport and lovely people… where else can you get all these in one place? A wonderful mix of modern towns and rural villages, there are star class hotels and boutique villas spotted around the country as the Sri Lankan tourist sector is booming following the end of the civil war in 2009.
 					.text-center
 						button#readmore.btn.btn-default
 							a(href="/srilanka") Read more
+		.container-fluid.visible-xs
+			.row(style='width: 100%; margin-top: 7%')
+				.col-xs-12
+					h2.text-center Sri Lanka
+					br
+					p.text-justify They say there is no other country in the world, like Sri Lanka. A smiling sun all year round, golden beaches, ancient cities, exciting safaris, colourful culture, adventure sport and lovely people… where else can you get all these in one place? A wonderful mix of modern towns and rural villages, there are star class hotels and boutique villas spotted around the country as the Sri Lankan tourist sector is booming following the end of the civil war in 2009.
+					.text-center
+						button#readmore.btn.btn-default
+							a(href="/srilanka") Read more
+				.col-xs-12
+					img#small_img.img-responsive.grow(src='images/collage_srilanka.jpg')
 		//- // End of 2 columns layout
 		//- // Footer
-		footer.container-fluid.text-center
-			.row
-				.col-sm-4
-					img.navbar-brand(src='images/logo_travellersblog.png')
-				.col-sm-4
-					h5 Address and contact info here
-				.col-sm-4
-					a.fa.fa-facebook(href='#')
-					a.fa.fa-linkedin(href='#')
-					a.fa.fa-github(href='#')
+		//- footer.container-fluid.text-center
+		//- 	.row
+		//- 		.col-sm-4
+		//- 			img.navbar-brand(src='images/logo_travellersblog.png')
+		//- 		.col-sm-4
+		//- 			h5 Address and contact info here
+		//- 		.col-sm-4
+		//- 			a.fa.fa-facebook(href='#')
+		//- 			a.fa.fa-linkedin(href='#')
+		//- 			a.fa.fa-github(href='#')
 
